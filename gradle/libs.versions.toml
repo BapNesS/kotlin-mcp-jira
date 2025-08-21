@@ -1,0 +1,22 @@
+[versions]
+koin = "3.5.3"
+kotlin = "2.2.10"
+kotlinx-coroutines = "1.10.2"
+ktor = "3.1.1"
+modelcontextprotocol = "0.6.0"
+slf4j= "2.0.17"
+
+[libraries]
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+modelcontextprotocol-sdk = { module = "io.modelcontextprotocol:kotlin-sdk", version.ref = "modelcontextprotocol" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+slf4j-simple= { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

@@ -1,0 +1,74 @@
+###
+
+GET {{baseUrl}}/rest/api/3/myself
+Authorization: {{authorization}}
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/rest/agile/1.0/board/{{boardId}}/sprint?state=active
+Authorization: {{authorization}}
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/rest/agile/1.0/issue/{{issueKey}}
+Authorization: {{authorization}}
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/rest/api/3/issue/{{issueKey}}/transitions
+Authorization: {{authorization}}
+Accept: application/json
+
+###
+
+POST {{baseUrl}}/rest/api/3/issue/{{issueKey}}/transitions
+Authorization: {{authorization}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "transition": {
+    "id": "31"
+  }
+}
+
+###
+
+POST {{baseUrl}}/rest/api/2/issue/{{issueKey}}/comment
+Authorization: {{authorization}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "body": "This is a comment from the API"
+}
+
+###
+
+GET {{baseUrl}}/rest/agile/1.0/board/{{boardId}}/sprint/{{sprintId}}/issue
+Authorization: {{authorization}}
+Accept: application/json
+
+###
+
+
+PUT {{baseUrl}}/rest/api/2/issue/{{issueKey}}
+Authorization: {{authorization}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "fields": {
+    "description": "The new description for the issue"
+  },
+  "update": {
+    "summary": [
+      {
+        "set": "The new summary for the issue"
+      }
+    ]
+  }
+}
